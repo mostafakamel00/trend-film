@@ -1,0 +1,72 @@
+<div class="sameclass">
+  <div class="overlay">
+    <div
+      class="container my-5"
+      data-aos="fadeInUp"
+      data-aos-duration="2000"
+      data-aos-delay="500"
+      data-aos-easing="ease-in-sine"
+    >
+      <!------------------Start Trend Movie----------------- -->
+      <div class="row">
+        <div class="col-md-4 title">
+          <h2>Trending movies to Watch Right Now</h2>
+          <p>most Watched movies the last week</p>
+        </div>
+        <div class="col-md-2 movie" *ngFor="let movie of Movies">
+          <!-- <a [routerLink]="['details', movie.id]"></a> -->
+          <img
+            class="w-100"
+            [src]="imgPrefix + movie.poster_path"
+            [alt]="movie.title"
+          />
+          <p class="">
+            <i class="fas fa-star"></i>
+            {{ movie.vote_average }}
+          </p>
+          <p class="">{{ movie.title }}</p>
+        </div>
+      </div>
+      <!------------------end Trend Movie----------------- -->
+      <hr />
+      <!------------------Start Trend TV----------------- -->
+      <div class="row">
+        <div class="col-md-4 title">
+          <h2>Trending TV to Watch Right Now</h2>
+          <p>most Watched TV the last week</p>
+        </div>
+        <div class="col-md-2 movie" *ngFor="let tvitem of trendingTv">
+          <img
+            class="w-100"
+            [src]="imgPrefix + tvitem.poster_path"
+            [alt]="tvitem.title"
+          />
+          <p class="">
+            <i class="fas fa-star"></i>
+            {{ tvitem.vote_average }}
+          </p>
+          <p class="">{{ tvitem.name }}</p>
+        </div>
+      </div>
+      <!------------------End Trend TV----------------- -->
+      <hr />
+      <!------------------Start Trend ACTORS----------------- -->
+      <div class="row">
+        <h2 class="text-center">Actors</h2>
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let actor of trendingActor">
+            <ng-template carouselSlide [id]="actor.id">
+              <img
+                class="w-100 carousel"
+                [src]="imgPrefix + actor.profile_path"
+                [alt]="actor.title"
+              />
+              <p class="actname">{{ actor.name }}</p>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+      <!------------------End Trend ACTORS----------------- -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="login sameclass">
+  <div class="overlay">
+    <!--Start Form-->
+    <form
+      action=""
+      [formGroup]="loginForm"
+      (ngSubmit)="loginForm.valid && formData()"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 image" aTilt>
+            <img src="../../../assets/images/img-01.png" alt="" />
+          </div>
+
+          <div
+            class="col-md-6 inputform"
+            data-aos="fadeInUp"
+            data-aos-duration="2000"
+            data-aos-delay="500"
+            data-aos-easing="ease-in-sine"
+          >
+            <input
+              type="email"
+              placeholder="email"
+              formControlName="email"
+              autofocus
+            />
+            <br />
+            <input
+              type="password"
+              placeholder="password"
+              formControlName="password"
+            />
+            <br />
+            <button [disabled]="loginForm.invalid" class="btn btn-primary">
+              Login
+            </button>
+            <a class="linkgo" routerLink="/signup">Create New Account</a>
+            <div class="alert">
+              {{ resMsgErr }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!--End Form-->
+  </div>
+</div>
+<!-- <pre>
+  {{ signupForm.value | json }}
+</pre> -->

@@ -1,0 +1,119 @@
+<div class="signup sameclass">
+  <div class="overlay">
+    <!--Start Form-->
+    <form
+      action=""
+      [formGroup]="signupForm"
+      (ngSubmit)="signupForm.valid && formData()"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 image" aTilt>
+            <img data-tilt src="../../../assets/images/img-01.png" alt="" />
+          </div>
+
+          <div
+            class="col-md-6 inputform"
+            data-aos="fadeInUp"
+            data-aos-duration="2000"
+            data-aos-delay="500"
+            data-aos-easing="ease-in-sine"
+          >
+            <!--Start input First name-->
+            <input
+              type="text"
+              placeholder="first name"
+              autofocus
+              formControlName="first_name"
+            />
+            <div
+              class="alertform"
+              *ngIf="
+                signupForm.controls.first_name.invalid &&
+                signupForm.controls.first_name.touched
+              "
+            >
+              First Name Required
+            </div>
+            <!--End input First name-->
+
+            <br />
+            <!--Start input Last name-->
+            <input
+              type="text"
+              placeholder="last name"
+              formControlName="last_name"
+            />
+            <div
+              class="alertform"
+              *ngIf="
+                signupForm.controls.last_name.invalid &&
+                signupForm.controls.last_name.touched
+              "
+            >
+              Last Name Required
+            </div>
+            <!--End input Last name-->
+
+            <br />
+            <!--Start input Age-->
+            <input type="number" placeholder="age" formControlName="age" />
+            <div
+              class="alertform"
+              *ngIf="
+                signupForm.controls.age.invalid &&
+                signupForm.controls.age.touched
+              "
+            >
+              Age is Required
+            </div>
+            <!--End input Age-->
+
+            <br />
+            <!--Start input Email-->
+            <input type="email" placeholder="email" formControlName="email" />
+
+            <!--End input Email-->
+
+            <br />
+            <!--Start input Password-->
+            <input
+              type="password"
+              placeholder="password"
+              formControlName="password"
+            />
+            <div
+              class="alertform"
+              *ngIf="
+                signupForm.controls.password.invalid &&
+                signupForm.controls.password.touched
+              "
+            >
+              min characters is 8
+            </div>
+            <!--End input Password-->
+
+            <br />
+            <div class="btn">
+              <button [disabled]="signupForm.invalid" class="btn btn-primary">
+                Sign Up
+              </button>
+              <a class="linkgo" routerLink="/login">i have Account</a>
+
+              <div class="alert d-inline" *ngIf="resMsgBoolen">
+                {{ resMsg }}
+              </div>
+              <div class="alert d-inline" *ngIf="resMsgErrBoolen">
+                {{ resMsgErr }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!--End Form-->
+  </div>
+</div>
+<!-- <pre>
+  {{ signupForm.value | json }}
+</pre> -->

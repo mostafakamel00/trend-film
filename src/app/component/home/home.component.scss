@@ -1,0 +1,55 @@
+.sameclass {
+  .overlay {
+    .row {
+      .title {
+        margin: auto 0;
+
+        p {
+          font-family: cursive;
+          font-size: 21px;
+          color: #cddc39;
+          font-style: italic;
+        }
+      }
+      .movie {
+        img {
+          border-radius: 15px;
+        }
+        p {
+          margin-left: 10px;
+          i {
+            color: #f5c518;
+          }
+          &:last-child {
+            color: #ffeb3b;
+            font-size: 18px;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}
+hr {
+  color: #5757b8;
+  margin-bottom: 40px;
+  height: 4px;
+}
+.actname {
+  color: #ffeb3b;
+  font-size: 18px;
+  font-style: italic;
+  display: inline;
+  margin-right: 15px;
+}
+h2 {
+  font-family: Motserrat-Regularn;
+  color: #ffc107;
+  font-size: 39px;
+  text-shadow: 0 0 7px #ff0000, 0 0 5px #f44336;
+  margin-bottom: 30px;
+}
+.carousel {
+  border-radius: 100%;
+  box-shadow: 0px 0px 22px #ff0000, 0 0 29px #f44336;
+}

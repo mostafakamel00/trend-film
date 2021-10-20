@@ -1,0 +1,27 @@
+$mainCol: #846add;
+
+.sameclass {
+  .overlay {
+    form {
+      min-width: 100%;
+      .row {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 90px 0;
+        border-radius: 15px;
+        min-height: 75vh;
+        .image {
+          display: flex;
+          justify-content: center;
+        }
+        .inputform {
+          .alertform {
+            color: $mainCol;
+            font-family: Motserrat-Regularn;
+            font-style: italic;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

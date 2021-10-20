@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
+$mainCol: #846add;
+body {
+  background: $mainCol;
+}
+.sameclass {
+  background-image: url("../src/assets/images/thumb-1920-1054258.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  .overlay {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(132, 106, 221, 0.9);
+  }
+}
+.alert {
+  color: wheat;
+  font-size: 25px;
+  font-family: Montserrat-Regular;
+}
+.inputform {
+  margin: auto;
+
+  input {
+    width: 70%;
+    background: #ccc;
+    color: #f64959 !important;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    border-radius: 34px;
+    margin-bottom: 15px;
+    font-family: cursive;
+    &::placeholder {
+      color: $mainCol;
+    }
+  }
+}
+.linkgo {
+  margin-left: 5rem;
+  text-decoration: none;
+  font-size: 21px;
+}
