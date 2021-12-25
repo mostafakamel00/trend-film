@@ -1,13 +1,20 @@
 .nav {
   background: #5840a8 !important;
-}
-.navbar-brand {
-  font-family: Motserrat-Regularn;
-  color: #ffc107;
-  font-size: 39px;
-  text-shadow: 0 0 7px #ff0000, 0 0 5px #f44336;
-}
-li {
-  display: flex;
-  justify-content: flex-end;
+  .parent {
+    display: grid;
+    grid-template-columns: auto auto;
+    .nav-brand {
+      .navbar-brand {
+        color: #ffc107;
+        font-size: 39px;
+        text-shadow: 0 0 7px #ff0000, 0 0 5px #f44336;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        letter-spacing: 5px;
+      }
+    }
+    .logout {
+      text-align: end;
+    }
+  }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MovieapiService } from 'src/app/services/movieapi.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Title } from '@angular/platform-browser';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
     this.getTrendMovie();
     this.getTrendTv();
     this.getTrendPerson();
+    // this.scrollY();
   }
   getTrendMovie() {
     this.movieApi.getTrending('movie').subscribe((res) => {
@@ -66,4 +68,21 @@ export class HomeComponent implements OnInit {
     },
     nav: false,
   };
+
+  // toTop() {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: 'smooth',
+  //   });
+  // }
+  // scrollY() {
+  //   window.onscroll = function () {
+  //     console.log(scrollY);
+  //     if (scrollY >= 1835) {
+  //       document.querySelector('.to-top')?.classList.add('show');
+  //     } else {
+  //       document.querySelector('.to-top')?.classList.remove('show');
+  //     }
+  //   };
+  // }
 }
