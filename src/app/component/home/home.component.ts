@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieapiService } from 'src/app/services/movieapi.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,9 @@ export class HomeComponent implements OnInit {
   trendingTv: any[] = [];
   trendingActor: any[] = [];
   imgPrefix: string = 'https://image.tmdb.org/t/p/w500/';
-  constructor(private movieApi: MovieapiService) {}
+  constructor(private movieApi: MovieapiService, private title: Title) {
+    this.title.setTitle('Welcome To Home');
+  }
 
   ngOnInit(): void {
     this.getTrendMovie();
@@ -33,10 +36,11 @@ export class HomeComponent implements OnInit {
   }
   getTrendPerson() {
     this.movieApi.getTrending('person').subscribe((res) => {
-      console.log(res);
+      // console.log(res);
       this.trendingActor = res.results;
     });
   }
+
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,

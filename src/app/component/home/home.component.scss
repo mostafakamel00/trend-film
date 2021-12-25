@@ -15,16 +15,27 @@
         img {
           border-radius: 15px;
         }
+        .head-title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 10px;
+
+          p {
+            margin-bottom: 0;
+            i {
+              color: #f5c518;
+            }
+          }
+          .btn {
+            color: white;
+          }
+        }
         p {
-          margin-left: 10px;
-          i {
-            color: #f5c518;
-          }
-          &:last-child {
-            color: #ffeb3b;
-            font-size: 18px;
-            font-style: italic;
-          }
+          color: #ffeb3b;
+          font-size: 18px;
+          font-style: italic;
+          margin-top: 15px;
         }
       }
     }

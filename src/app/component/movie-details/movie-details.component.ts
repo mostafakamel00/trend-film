@@ -14,15 +14,13 @@ export class MovieDetailsComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private movieApi: MovieapiService
-  ) {}
-
-  ngOnInit(): void {
-    this.getMovieDetails();
-  }
-  getMovieDetails() {
-    this.id = this.activatedRoute.snapshot.params.id;
-    this.movieApi.getMoviesDetails(this.id).subscribe((res) => {
-      this.movieDetails = res;
+  ) {
+    this.id = activatedRoute.snapshot.params.id;
+    movieApi.getMoviesDetails(this.id).subscribe((response) => {
+      this.movieDetails = response;
+      console.log('🚀 ~ response', response);
     });
   }
+
+  ngOnInit(): void {}
 }

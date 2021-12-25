@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -13,7 +14,13 @@ export class SignupComponent implements OnInit {
   resMsgErr = '';
   resMsgBoolen = false;
   resMsgErrBoolen = false;
-  constructor(private fb: FormBuilder, private auth: AuthService) {}
+  constructor(
+    private fb: FormBuilder,
+    private auth: AuthService,
+    private title: Title
+  ) {
+    this.title.setTitle('Welcome To SignUp');
+  }
 
   ngOnInit(): void {
     this.bildForm();

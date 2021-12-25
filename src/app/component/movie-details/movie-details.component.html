@@ -1,15 +1,29 @@
-<!-- <div class="sameclass">
+<div class="sameclass">
   <div class="overlay">
-    <div class="container">
+    <div class="container py-5">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 image">
           <img class="w-100" [src]="imgPrefix + movieDetails?.poster_path" />
         </div>
-        <div class="col-md-8">
-          <h3 class="px-5 mt-5">{{ movieDetails?.title }}</h3>
-          <p class="px-5 mt-3 text-white">{{ movieDetails?.overview }}</p>
+        <div class="col-md-8 info">
+          <div class="head-title">
+            <h3 class="px-5">{{ movieDetails?.title }}</h3>
+            <p class="">
+              <i class="fas fa-star"></i>
+              {{ movieDetails.vote_average }}/10
+              <span> {{ movieDetails.vote_count }} </span>
+            </p>
+          </div>
+          <h2 class="px-5">Storyline</h2>
+          <p class="px-5">{{ movieDetails?.overview }}</p>
+          <span class="px-5 type h5"
+            >kind of movie :
+            <span class="typetwo h6">{{
+              movieDetails.genres[0].name
+            }}</span></span
+          >
         </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>

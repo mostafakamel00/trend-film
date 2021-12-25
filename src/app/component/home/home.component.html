@@ -14,16 +14,20 @@
           <p>most Watched movies the last week</p>
         </div>
         <div class="col-md-2 movie" *ngFor="let movie of Movies">
-          <!-- <a [routerLink]="['details', movie.id]"></a> -->
           <img
             class="w-100"
             [src]="imgPrefix + movie.poster_path"
             [alt]="movie.title"
           />
-          <p class="">
-            <i class="fas fa-star"></i>
-            {{ movie.vote_average }}
-          </p>
+          <div class="head-title">
+            <p class="">
+              <i class="fas fa-star"></i>
+              {{ movie.vote_average }}
+            </p>
+            <a class="btn btn-info btn-sm" [routerLink]="['/details', movie.id]"
+              >Details</a
+            >
+          </div>
           <p class="">{{ movie.title }}</p>
         </div>
       </div>

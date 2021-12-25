@@ -15,6 +15,7 @@ import { MovieDetailsComponent } from './component/movie-details/movie-details.c
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ChangecolorDirective } from './directive/changecolor.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     NotfoundComponent,
     HomeComponent,
     MovieDetailsComponent,
+    ChangecolorDirective,
   ],
   imports: [
     BrowserModule,
