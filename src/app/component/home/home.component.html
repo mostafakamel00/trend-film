@@ -19,6 +19,7 @@
             [src]="imgPrefix + movie.poster_path"
             [alt]="movie.title"
           />
+
           <div class="head-title">
             <p class="">
               <i class="fas fa-star"></i>
@@ -28,7 +29,7 @@
               >Details</a
             >
           </div>
-          <p class="">{{ movie.title }}</p>
+          <p class="text-center">{{ movie.title }}</p>
         </div>
       </div>
       <!------------------end Trend Movie----------------- -->
@@ -45,11 +46,13 @@
             [src]="imgPrefix + tvitem.poster_path"
             [alt]="tvitem.title"
           />
-          <p class="">
-            <i class="fas fa-star"></i>
-            {{ tvitem.vote_average }}
-          </p>
-          <p class="">{{ tvitem.name }}</p>
+          <div class="info">
+            <p>
+              <i class="fas fa-star"></i>
+              {{ tvitem.vote_average }}
+            </p>
+            <p>{{ tvitem.name }}</p>
+          </div>
         </div>
       </div>
       <!------------------End Trend TV----------------- -->

@@ -1,6 +1,6 @@
 .row {
   padding: 0px;
-  border-radius: 10px;
+  border-top-left-radius: 400px;
   background: rgba(0, 0, 0, 0.6);
   .image {
     padding-left: 0;
@@ -78,12 +78,20 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .sameclass .overlay .row {
+    border-top-left-radius: 310px;
+  }
+}
 @media screen and (max-width: 991px) {
   img {
     min-height: 100%;
   }
   .vote {
     text-align: center;
+  }
+  .sameclass .overlay .row {
+    border-top-left-radius: 228px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -93,5 +101,8 @@
   img {
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0px;
+  }
+  .sameclass .overlay .row {
+    border-top-left-radius: 408px;
   }
 }

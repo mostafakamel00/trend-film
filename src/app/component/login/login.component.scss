@@ -9,6 +9,7 @@ $mainCol: #846add;
         padding: 90px 0;
         border-radius: 15px;
         min-height: 75vh;
+        margin: 20px 0;
         .image {
           display: flex;
           justify-content: center;
@@ -32,5 +33,16 @@ $mainCol: #846add;
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .login .overlay .container .row .inputform input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .login .overlay .container .row .inputform input {
+    width: 70%;
   }
 }

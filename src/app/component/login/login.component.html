@@ -34,7 +34,10 @@
               appChangecolor
             />
             <br />
-            <button [disabled]="loginForm.invalid" class="btn btn-primary">
+            <button
+              [disabled]="loginForm.invalid"
+              class="btn btn-primary d-block my-2"
+            >
               Login
             </button>
             <a class="linkgo" routerLink="/signup">Create New Account</a>

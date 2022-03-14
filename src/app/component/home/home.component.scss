@@ -24,7 +24,8 @@
       // Start movie class
       .movie {
         img {
-          border-radius: 15px;
+          border-top-left-radius: 50px;
+          border-bottom-right-radius: 50px;
         }
         .head-title {
           display: flex;
@@ -34,6 +35,7 @@
 
           p {
             margin-bottom: 0;
+
             i {
               color: #f5c518;
             }
@@ -41,6 +43,11 @@
           .btn {
             color: white;
           }
+        }
+        .info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
         }
         p {
           color: #ffeb3b;
